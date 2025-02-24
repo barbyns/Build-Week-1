@@ -54,12 +54,40 @@ label {
 label input[type="checkbox"] {
   margin-right: 8px;
 }
+<<<<<<< HEAD
 
 .checkbox-button-container {
   color: white;
   background-color: rgb(0, 255, 213);
   padding: 5px 10px;
   border-radius: 4px;
+=======
+.center {
+  text-align: center;
+}
+.button-type1 {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  background-color: #00ffff;
+  box-shadow: #2f8cb8 0px 5px 25px;
+  padding: 1em 3em;
+}
+.button-type2 {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: white solid 0.2em;
+  padding: 1em 3em;
+  box-shadow: #2f8cb8 0px 5px 25px;
+}
+.button-type-question {
+  background-color: rgba(99, 99, 99, 0.4);
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 1em 4em;
+>>>>>>> main
 }
 
 
