@@ -75,3 +75,11 @@ label input[type="checkbox"] {
   margin-right: auto;
   width: 60%;
 }
+.comment {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 2em 0;
+  border-bottom: 2px solid #c2128d;
+  padding: 0 3em;
+}
