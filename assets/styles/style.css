@@ -7,33 +7,44 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .logo-container {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 3%;
+  margin-left: 3%;
 }
 
 .logo {
-  width: 30%;
+  width: 20%;
   height: auto;
 }
+
+main{
+  /*accentro tutto*/
+  text-align: center;
+  margin:auto 0;
+}
+
 h1 {
   color: white;
-  padding-top: 20vh;
+  padding-top: 12vh;
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 h2 {
   color: hotpink;
   font-size: 2rem;
 }
+
 p {
   color: white;
   font-size: 1.5rem;
 }
+
 li {
   color: white;
 }
+
 label {
   display: flex;
   align-items: center;
@@ -43,9 +54,12 @@ label {
 label input[type="checkbox"] {
   margin-right: 8px;
 }
+
 .checkbox-button-container {
   color: white;
   background-color: rgb(0, 255, 213);
   padding: 5px 10px;
   border-radius: 4px;
 }
+
+
