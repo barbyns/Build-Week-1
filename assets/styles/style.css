@@ -71,6 +71,9 @@ label input[type="checkbox"] {
 }
 .comment {
   background-color: transparent;
+  box-shadow: none;
+  border: none;
   margin: 2em 0;
-  border: 2px none none solid none #c2128d;
+  border-bottom: 2px solid #c2128d;
+  padding: 0 3em;
 }
