@@ -67,7 +67,13 @@ label input[type="checkbox"] {
   color: white;
   font-weight: bold;
   border-radius: 50px;
-  padding: 1em 4em;
+  padding: 1em 10%;
+}
+.force-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 .comment {
   background-color: transparent;
