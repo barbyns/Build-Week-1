@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review</title>
     <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
@@ -17,25 +24,38 @@
         />
       </div>
     </header>
-    <main>
+    <main id="Review">
       <section>
         <h1>Tell us how it's going</h1>
-        <p>
-          From 0 to 10, how likely are you to recommend EPICODE to a friend or a
-          colleague?
-        </p>
-        <span>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-          <button onclick="" onmouseenter="" id="stars"></button>
-        </span>
+        <p>From 0 to 10, how likely are you to recommend EPICODE</p>
+        <p><span>to a friend or a colleague?</span></p>
+        <div class="star-rating" data-rating="4.6">
+          <div class="empty-stars">
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+
+          <div class="full-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
       </section>
       <section>
         <p>Leave us an open feedback about your experience so far</p>
@@ -45,11 +65,11 @@
             type="text"
             placeholder="Write your comment here"
           />
+          <hr />
         </form>
+        <button class="button-type1">MORE INFO!</button>
       </section>
     </main>
-    <footer class="center">
-      <div><a href="#" class="button-type1">MORE INFO</a></div>
-    </footer>
+    <footer></footer>
   </body>
 </html>
