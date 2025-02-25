@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const options = document.querySelectorAll(".option");
-  const correctAnswer = "<input type='checkbox'>";
+  const options = document.querySelectorAll(".option")
+  const correctAnswer = "<input type='checkbox'>"
 
   options.forEach((option) => {
     option.addEventListener("click", function () {
       if (option.textContent.trim() === correctAnswer) {
-        alert("Correct answer!");
+        alert("Correct answer!")
       } else {
-        alert("Wrong answer! Try again.");
+        alert("Wrong answer! Try again.")
       }
-    });
-  });
-});
+    })
+  })
+})
 // Array di domande con risposte e soluzione corretta
 const questions = [
   {
@@ -104,4 +104,15 @@ const questions = [
       { text: "Character", correct: true },
     ],
   },
-];
+]
+
+const result = 0
+const pointAdder = function () {
+  if (questions.answers.contains(`correct: true`)) {
+    result = result + 1
+    return result
+  } else {
+    result = result
+    return result
+  }
+}
