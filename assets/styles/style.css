@@ -104,7 +104,6 @@ label input[type="checkbox"] {
   box-shadow: none;
   border: none;
   margin: 2em 0;
-  border-bottom: 2px solid #c2128d;
   padding: 0 3em;
 }
 
@@ -131,7 +130,18 @@ label input[type="checkbox"] {
 
 /*creazione stelle fine*/
 
-hr{
+.left{
+  text-align: left;
+}
 
+#Review input{
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+#Review hr{
+border-color: #c2128d;
+margin-top:0;
+margin-bottom: 50px;
 }
 
