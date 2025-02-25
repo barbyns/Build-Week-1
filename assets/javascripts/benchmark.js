@@ -106,13 +106,26 @@ const questions = [
   },
 ]
 
-const result = 0
+const correctAnswers = 0
+const wrongAnswers = 0
+//rileva le domande e le mette nella const giusta
 const pointAdder = function () {
   if (questions.answers.contains(`correct: true`)) {
-    result = result + 1
-    return result
-  } else {
-    result = result
-    return result
+    correctAnswers = correctAnswers + 1
+    return correctAnswers
+  } else if (questions.answers.contains(`correct: false`)) {
+    wrongAnswers = wrongAnswers + 1
+    return wrongAnswers
   }
+}
+//funzione per mettere dinamicamente il punteggio giusto nella pagina results
+const correctPoints = function () {
+  const aim = document.getElementById("Correct")
+  aim.innerText = `${correctAnswers}/10 questions`
+}
+
+//funzione per mettere dinamicamente il punteggio sbagliato nella pagina results
+const wrongPoints = function () {
+  const aim = document.getElementById("Wrong")
+  aim.innerText = `${wrongAnswers}/10 questions`
 }
