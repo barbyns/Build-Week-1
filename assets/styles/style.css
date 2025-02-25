@@ -1,0 +1,77 @@
+body {
+    background-image: url('../assets/img/bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+.logo-container {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+}
+
+.logo {
+    width: 150px; 
+    height: auto; 
+}
+  h1 {
+    color: white; 
+    padding-top: 20vh; 
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  h2{
+    color: hotpink;
+    font-size: 2rem;
+  }
+h3{
+    color: white;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+li {
+ color: white;
+
+}
+
+
+aside {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 30px;
+}
+
+.checkbox-container {
+  display: flex; 
+  justify-content:flex-start;
+  align-items: center
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; 
+  background-color: transparent;
+}
+
+label {
+  font-size: 0.8em;
+  font-weight: normal;
+  color: white
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4ca3af;
+  color: black;
+  text-decoration: none;
+    transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+.button:hover {
+  background-color: #4ca3af;
+}
