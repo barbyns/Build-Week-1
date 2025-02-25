@@ -7,33 +7,57 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .logo-container {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 3%;
+  margin-left: 3%;
 }
 
 .logo {
-  width: 30%;
+  width: 20%;
   height: auto;
 }
+
+#Review{
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
 h1 {
   color: white;
-  padding-top: 20vh;
+  padding-top: 12vh;
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+#Review h1{
+  font-size: 3.5em;
+margin-bottom: 20px;
+text-shadow: none;
+font-weight: bold;
+}
+
+#Review p{
+  font-size: 1.8em
+}
+
 h2 {
   color: hotpink;
   font-size: 2rem;
 }
+
 p {
   color: white;
   font-size: 1.5rem;
 }
+
 li {
   color: white;
 }
+
 label {
   display: flex;
   align-items: center;
@@ -80,6 +104,44 @@ label input[type="checkbox"] {
   box-shadow: none;
   border: none;
   margin: 2em 0;
-  border-bottom: 2px solid #c2128d;
   padding: 0 3em;
 }
+
+/* creazione stelle inizio*/
+#Review i{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 3em;
+}
+.star-rating {
+  display: inline-block;
+  position: relative;
+}
+.empty-stars {
+  position: absolute;
+  color: #0B113B;
+}
+.full-stars {
+  overflow: hidden;
+   white-space: nowrap;
+  color: #00FFFF;
+  opacity: 0.8;
+}
+
+/*creazione stelle fine*/
+
+.left{
+  text-align: left;
+}
+
+#Review input{
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+#Review hr{
+border-color: #c2128d;
+margin-top:0;
+margin-bottom: 50px;
+}
+
