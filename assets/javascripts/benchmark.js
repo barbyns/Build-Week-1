@@ -127,7 +127,7 @@ const correctPoints = function () {
 const correctPercentage = function () {
   const operation = ((correctAnswers - 10) / 10) * 100
   const aim = document.getElementById("CorrectPercentage")
-  aim.innerText = operation
+  aim.innerText = operation`\u0025`
 }
 
 //funzione per mettere dinamicamente il punteggio sbagliato nella pagina results
@@ -139,5 +139,5 @@ const wrongPoints = function () {
 const wrongPercentage = function () {
   const operation = ((wrongAnswers - 10) / 10) * 100
   const aim = document.getElementById("WrongPercentage")
-  aim.innerText = operation
+  aim.innerText = operation`\u0025`
 }
