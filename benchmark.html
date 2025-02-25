@@ -8,24 +8,21 @@
     <title>Benchmark</title>
   </head>
   <body>
-    <div class="logo"><img src="assets//img/epicode_logo.png" /></div>
-    <header class="Logo"></header>
-    <main>How can I create a checkbox in HTML?</main>
-    <div class="force-center">
-      <button class="button-type-question">
-        <code>input type = "check"</code>
-      </button>
-      <button class="button-type-question">
-        <code>input type = "checkbox"</code>
-      </button>
-    </div>
-    <div class="force-center">
-      <button class="button-type-question"><code>checkbox</code></button>
-      <button class="button-type-question">
-        <code>input type = "button</code>
-      </button>
-    </div>
-    <footer>Question 1/10</footer>
-    <script src="benchmark.js"></script>
+    <div class="logo"><img src="assets/img/epicode_logo.png" alt="logo" /></div>
+
+    <!-- Contenitore principale per la domanda e le risposte -->
+    <main>
+      <p id="question-text">How can I create a checkbox in HTML?</p>
+      <div id="options-container">
+        <!-- Le opzioni verranno caricate dinamicamente qui -->
+      </div>
+    </main>
+
+    <!-- Footer con numero della domanda corrente -->
+    <footer>
+      <h6 id="question-number">Question 1/10</h6>
+    </footer>
+
+    <script src="assets/javascripts/benchmark.js"></script>
   </body>
 </html>
