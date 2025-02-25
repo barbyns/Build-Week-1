@@ -1,7 +1,5 @@
 body {
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
+
   background-image: url(../img/bg.jpg);
   background-size: cover;
   background-position: center;
@@ -148,17 +146,9 @@ margin-top:0;
 margin-bottom: 50px;
 }
 
-=======
->>>>>>> Stashed changes
-    background-image: url('../assets/img/bg.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 
-}
+
+
 .logo-container {
     position: absolute; 
     top: 10px; 
@@ -181,18 +171,17 @@ margin-bottom: 50px;
   }
 h3{
     color: white;
-<<<<<<< Updated upstream
     font-size: 1rem;
     padding-left: 20px;
-=======
-    font-size: 1.5rem;;
->>>>>>> Stashed changes
+
+    
+
 }
 li {
  color: white;
 
 }
-<<<<<<< Updated upstream
+
 
 
 aside {
@@ -219,19 +208,12 @@ label {
   color: white
 }
 
-.button {
-  padding: 10px 20px;
-  background-color: #4ca3af;
-  color: black;
-  text-decoration: none;
-    transition: background-color 0.3s;
-  margin-left: 20px;
-}
+
 
 .button:hover {
   background-color: #4ca3af;
 }
-=======
+
 label {
     display: flex;
     align-items: center;
@@ -247,5 +229,4 @@ label {
     padding: 5px 10px; 
     border-radius: 4px;
   }
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
