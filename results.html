@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Results</title>
     <link src="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
     <header>
@@ -12,13 +13,17 @@
     </header>
     <main>
       <h1>Results</h1>
-      <p>The summary of your anwsers:</p>
+      <p>The summary of your answers:</p>
       <div>
         <h3>Correct</h3>
+        <h3 id="CorrectPercentage"></h3>
+        <p id="Correct"></p>
       </div>
 
       <div>
         <h3>Wrong</h3>
+        <h3 id="WrongPercentage"></h3>
+        <p id="Wrong"></p>
       </div>
 
       <div>
@@ -30,10 +35,11 @@
         </p>
       </div>
 
-      <aside>
-        <a href="review.html" class="button">RATE US</a>
+      <aside class="center">
+        <a href="review.html" class="button-type2">RATE US</a>
       </aside>
     </main>
     <footer></footer>
+    <!-- <script src="./assets/javascripts/benchmark.js"></script> -->
   </body>
 </html>

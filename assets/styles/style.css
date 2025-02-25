@@ -1,5 +1,4 @@
 body {
-
   background-image: url(../img/bg.jpg);
   background-size: cover;
   background-position: center;
@@ -20,7 +19,7 @@ body {
 }
 
 #Review{
-  /*accentro tutto*/
+  
   width: 55%;
   text-align: center;
   margin: 0 auto;
@@ -101,6 +100,7 @@ label input[type="checkbox"] {
   width: 60%;
 }
 .comment {
+  width: 100%;
   background-color: transparent;
   box-shadow: none;
   border: none;
@@ -108,7 +108,7 @@ label input[type="checkbox"] {
   padding: 0 3em;
 }
 
-/* creazione stelle inizio*/
+
 #Review i{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -129,7 +129,7 @@ label input[type="checkbox"] {
   opacity: 0.8;
 }
 
-/*creazione stelle fine*/
+
 
 .left{
   text-align: left;

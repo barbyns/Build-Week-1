@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>creare Benchmark</title>
-    
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Benvenuti al benchmark di epicode</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <header>
     <div class="logo-container">
         <img src="assets/img/epicode_logo.png" alt="Epicode Logo" class="logo">
     </header>  
   <body>
-    <h1>
-          Welcome to 
-        <div>
-            your exam
-        </div>
-        </h1>
-      
+    <header>
+      <img
+        class="logo"
+        class="logo-container"
+        src="./assets/img/epicode_logo.png"
+        alt="logo di epicode"
+      />
+    </header>
+    <main><h1>Welcome to your exam</h1></main>
+    <article>
       <h2>Instructions</h2>
       
         <div>
@@ -40,18 +43,10 @@
    </ul>
     
     <aside>
-      <div class="checkbox-container">
-      <input type="checkbox" id="promise" />
-      <label for="promise">I promise to answer myself without help from anyone</label>
-    </div>
-      <a href="benchmark.html" class="button">PROCEED</a>
+      <input type="checkbox" id="agreement" onchange="checkCheckbox(event)" />
+      I promise to answer myself without help from anyone
+      <a id="proceedButton" class="button-type1" href="#">PROCEED</a>
     </aside>
-    
-
-   
-    
-  
-
-     
+    <script src="./assets/javascripts/index.js"></script>
   </body>
 </html>
