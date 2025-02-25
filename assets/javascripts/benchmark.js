@@ -105,115 +105,115 @@ document.addEventListener("DOMContentLoaded", function () {
         { text: "Character", correct: true },
       ],
     },
-  ];
+  ]
 
   // Variabile che tiene traccia della domanda corrente
-  let currentQuestionIndex = 0;
+  let currentQuestionIndex = 0
 
   // Seleziona gli elementi HTML in cui verranno mostrate le domande e le opzioni
-  const questionText = document.getElementById("question-text");
-  const optionsContainer = document.getElementById("options-container");
-  const questionNumber = document.getElementById("question-number");
-  const mainContainer = document.querySelector("main");
+  const questionText = document.getElementById("question-text")
+  const optionsContainer = document.getElementById("options-container")
+  const questionNumber = document.getElementById("question-number")
+  const mainContainer = document.querySelector("main")
 
   // Funzione per caricare una nuova domanda
   function loadQuestion() {
     // Se ci sono ancora domande disponibili...
     if (currentQuestionIndex < questions.length) {
       // Recupera la domanda attuale
-      const currentQuestion = questions[currentQuestionIndex];
+      const currentQuestion = questions[currentQuestionIndex]
 
       // Mostra il testo della domanda
-      questionText.textContent = currentQuestion.question;
+      questionText.textContent = currentQuestion.question
 
       // Pulisce le risposte precedenti
-      optionsContainer.innerHTML = "";
+      optionsContainer.innerHTML = ""
 
       // Usa un ciclo for per creare i bottoni delle risposte
       for (let i = 0; i < currentQuestion.answers.length; i++) {
-        const button = document.createElement("button");
-        button.classList.add("button-type-question");
-        button.textContent = currentQuestion.answers[i].text;
+        const button = document.createElement("button")
+        button.classList.add("button-type-question")
+        button.textContent = currentQuestion.answers[i].text
 
         // Aggiunge un evento click per controllare la risposta
         button.addEventListener("click", function () {
-          checkAnswer();
-        });
+          checkAnswer()
+        })
 
         // Aggiunge il bottone al contenitore delle risposte
-        optionsContainer.appendChild(button);
+        optionsContainer.appendChild(button)
       }
 
       // Aggiorna il numero della domanda
       questionNumber.textContent = `Question ${currentQuestionIndex + 1}/${
         questions.length
-      }`;
+      }`
     } else {
       // Se le domande sono finite, mostra il pulsante dei risultati
-      showResultsButton();
+      showResultsButton()
     }
   }
 
   // Funzione che passa alla prossima domanda quando l'utente seleziona una risposta
   function checkAnswer() {
-    currentQuestionIndex++; // Passa alla domanda successiva
-    loadQuestion(); // Ricarica la nuova domanda
+    currentQuestionIndex++ // Passa alla domanda successiva
+    loadQuestion() // Ricarica la nuova domanda
   }
 
   // Funzione per mostrare il bottone che porta alla pagina dei risultati
   function showResultsButton() {
     // Pulisce il contenitore principale
-    mainContainer.innerHTML = "";
+    mainContainer.innerHTML = ""
 
     // Crea un nuovo bottone per visualizzare i risultati
-    const resultsButton = document.createElement("button");
-    resultsButton.textContent = "Vai ai risultati";
-    resultsButton.classList.add("button-type2");
+    const resultsButton = document.createElement("button")
+    resultsButton.textContent = "Vai ai risultati"
+    resultsButton.classList.add("button-type2")
 
     // Aggiunge un evento per reindirizzare alla pagina dei risultati
     resultsButton.addEventListener("click", function () {
-      window.location.href = "results.html";
-    });
+      window.location.href = "results.html"
+    })
 
     // Aggiunge il bottone alla pagina
-    mainContainer.appendChild(resultsButton);
+    mainContainer.appendChild(resultsButton)
   }
 
   // Avvia la prima domanda quando la pagina è caricata
-  loadQuestion();
-});
+  loadQuestion()
+})
 
-const correctAnswers = 0;
-const wrongAnswers = 0;
 //rileva le domande e le mette nella const giusta
 const pointAdder = function () {
-  if (questions.answers.contains(`correct: true`)) {
-    correctAnswers = correctAnswers + 1;
-    return correctAnswers;
-  } else if (questions.answers.contains(`correct: false`)) {
-    wrongAnswers = wrongAnswers + 1;
-    return wrongAnswers;
+  const correctAnswers = 0
+  const wrongAnswers = 0
+  if (questions.answers === true) {
+    correctAnswers = correctAnswers + 1
+    return correctAnswers
+  } else if (questions.answers === false) {
+    wrongAnswers = wrongAnswers + 1
+    return wrongAnswers
   }
-};
+}
 //funzione per mettere dinamicamente il punteggio giusto nella pagina results
 const correctPoints = function () {
-  const aim = document.getElementById("Correct");
-  aim.innerText = `${correctAnswers}/10 questions`;
-}; //funzione per mettere la percentuale nell'punteggio della pagina
+  const aim = document.getElementById("Correct")
+  aim.innerText = `${correctAnswers}/10 questions`
+} //funzione per mettere la percentuale nell'punteggio della pagina
 const correctPercentage = function () {
-  const operation = ((correctAnswers - 10) / 10) * 100;
-  const aim = document.getElementById("CorrectPercentage");
-  aim.innerText = operation`\u0025`;
-};
+  const operation = ((correctAnswers - 10) / 10) * 100
+  const aim = document.getElementById("CorrectPercentage")
+  aim.innerText = operation`\u0025`
+}
 
 //funzione per mettere dinamicamente il punteggio sbagliato nella pagina results
 const wrongPoints = function () {
-  const aim = document.getElementById("Wrong");
-  aim.innerText = `${wrongAnswers}/10 questions`;
-};
+  const aim = document.getElementById("Wrong")
+  aim.innerText = `${wrongAnswers}/10 questions`
+}
 //funzione per mettere dinamicamente la percentuale sbagliata nella pagina results
 const wrongPercentage = function () {
-  const operation = ((wrongAnswers - 10) / 10) * 100;
-  const aim = document.getElementById("WrongPercentage");
-  aim.innerText = operation`\u0025`;
-};
+  const operation = ((wrongAnswers - 10) / 10) * 100
+  const aim = document.getElementById("WrongPercentage")
+  aim.innerText = operation`\u0025`
+}
