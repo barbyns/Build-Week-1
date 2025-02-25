@@ -108,28 +108,12 @@ label input[type="checkbox"] {
   padding: 0 3em;
 }
 
-/* creazione stelle inizio*/
 #Review i{
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 3em;
+  color:#00ffff
 }
-.star-rating {
-  display: inline-block;
-  position: relative;
-}
-.empty-stars {
-  position: absolute;
-  color: #0B113B;
-}
-.full-stars {
-  overflow: hidden;
-   white-space: nowrap;
-  color: #00FFFF;
-  opacity: 0.8;
-}
-
-/*creazione stelle fine*/
 
 .left{
   text-align: left;
