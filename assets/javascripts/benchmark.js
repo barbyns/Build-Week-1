@@ -199,9 +199,21 @@ const pointAdder = function () {
 const correctPoints = function () {
   const aim = document.getElementById("Correct");
   aim.innerText = `${correctAnswers}/10 questions`;
+}; //funzione per mettere la percentuale nell'punteggio della pagina
+const correctPercentage = function () {
+  const operation = ((correctAnswers - 10) / 10) * 100;
+  const aim = document.getElementById("CorrectPercentage");
+  aim.innerText = operation`\u0025`;
 };
+
 //funzione per mettere dinamicamente il punteggio sbagliato nella pagina results
 const wrongPoints = function () {
   const aim = document.getElementById("Wrong");
   aim.innerText = `${wrongAnswers}/10 questions`;
+};
+//funzione per mettere dinamicamente la percentuale sbagliata nella pagina results
+const wrongPercentage = function () {
+  const operation = ((wrongAnswers - 10) / 10) * 100;
+  const aim = document.getElementById("WrongPercentage");
+  aim.innerText = operation`\u0025`;
 };
