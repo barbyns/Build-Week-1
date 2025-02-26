@@ -3,7 +3,7 @@ function checkCheckbox() {
   const button = document.getElementById("proceedButton")
 
   // Se la checkbox è selezionata, abilita il pulsante
-  if (checkbox.unchecked) {
+  if (checkbox.checked) {
     button.href = "benchmark.html" // Imposta il link
     button.classList.add("enabled") // Aggiungi una classe per stile
   } else {
