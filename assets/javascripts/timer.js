@@ -3,7 +3,7 @@ let currentQuest = 0; // Indice della domanda corrente
   let timer; // Variabile per il timer
   let timeLeft = 60; // Tempo rimanente per ogni domanda
 
-  // Funzione per avviare il timer. Va creato un <div id="timer">60</div> nella pagina HTML
+  // Funzione per avviare il timer. 
   const goTimer = function() {
     clearInterval(timer); // Ferma il timer precedente
       timeLeft = 60; // Reimposta il timer a 60 sec 
