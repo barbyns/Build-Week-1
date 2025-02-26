@@ -17,12 +17,90 @@ body {
   width: 20%;
   height: auto;
 }
+/* main */
+main h1 {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 4rem;
+  margin: auto;
+  padding-left: 2rem;
+}
+main p {
+  font-family: "Outfit", serif;
+  font-weight: bold;
+  font-size: 4rem;
+  margin: auto;
+  text-align: left;
+  padding-left: 2rem;
+}
+article h2 {
+  margin: 2rem;
+  padding-top: 1rem;
+  font-family: "Outfit", serif;
+  color: #da00b5;
+  font-weight: bold;
+  text-align: left;
+}
+article p {
+  font-family: "Outfit", serif;
+  text-align: left;
+  margin: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-top: 2px;
+  padding-left: 2rem;
+}
+li span {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  padding: 2px;
+  margin: 0;
+}
+aside {
+  font-family: "Outfit", serif;
+  color: white;
+  padding-bottom: 35px;
+  padding-top: 150px;
+  padding-left: 3rem;
+}
+ul{
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  font-family: "Outfit", serif;
+  margin: 4px;
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+li {
+  margin: auto;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  font-family: "Outfit", serif;
+  font-size: 20px;
+}
+.right{
+  text-align: right;
+  padding-right: 15%;
+  margin-right: 20%;
+}
 
 #Review{
   
   width: 55%;
   text-align: center;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 
@@ -33,15 +111,15 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#Review h1{
+#Review h1 {
   font-size: 3.5em;
-margin-bottom: 20px;
-text-shadow: none;
-font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: none;
+  font-weight: bold;
 }
 
-#Review p{
-  font-size: 1.8em
+#Review p {
+  font-size: 1.8em;
 }
 
 h2 {
@@ -124,26 +202,33 @@ label {
   padding: 0 3em;
 }
 
-#Review i{
+#Review i {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 3em;
-  color:#00ffff
+  color: #00ffff;
 }
 
-.left{
+.left {
   text-align: left;
 }
 
-#Review input{
+#Review input {
   font-size: 1em;
   margin-bottom: 0;
 }
 
-#Review hr{
-border-color: #c2128d;
-margin-top:0;
-margin-bottom: 50px;
+#Review hr {
+  border-color: #c2128d;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#question-number {
+  text-align: center;
+  color: #ece8f1;
+  font-weight: bold;
+  font-size: 1.6em;
+  margin: 20% 0 0 0;
 }
 
 

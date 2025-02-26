@@ -8,7 +8,23 @@
     <title>Benchmark</title>
   </head>
   <body>
-    <div class="logo"><img src="assets/img/epicode_logo.png" alt="logo" /></div>
+    <header>
+      <div>
+        <img
+          class="logo"
+          class="logo-container"
+          src="assets/img/epicode_logo.png"
+          alt="logo"
+        />
+      </div>
+      <div class="circle-timer">
+        <div class="progress-background"></div>
+        <div class="progress-foreground"></div>
+        <span class="text_top">SECONDS</span>
+        <span id="timer-text">60</span>
+        <span class="text_bottom">REMAINING</span>
+      </div>
+    </header>
 
     <!-- Contenitore principale per la domanda e le risposte -->
     <main>
@@ -20,9 +36,10 @@
 
     <!-- Footer con numero della domanda corrente -->
     <footer>
-      <h6 id="question-number">Question 1/10</h6>
+      <h6 id="question-number">Question 1<span>/10</span></h6>
     </footer>
 
     <script src="assets/javascripts/benchmark.js"></script>
+    <script src="assets/javascripts/timer.js"></script>
   </body>
 </html>
