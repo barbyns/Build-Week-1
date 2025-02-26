@@ -114,6 +114,20 @@ label input[type="checkbox"] {
   text-align: left;
 }
 
+#correct{
+  display: inline;
+}
+
+#wrong{
+  display: inline;
+}
+.canvasContainer{
+  display: inline-block;
+  text-align: center;
+width: 400px;
+height: 400px;
+}
+
 #Review input {
   font-size: 1em;
   margin-bottom: 0;
@@ -124,6 +138,7 @@ label input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 50px;
 }
+
 #question-number {
   text-align: center;
   color: #ece8f1;
