@@ -1,5 +1,7 @@
 let correctAnswers = 0;
 let wrongAnswers = 0;
+let timeLeft = 60;
+let timer;
 document.addEventListener("DOMContentLoaded", function () {
   const questions = [
     {
@@ -103,6 +105,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const optionsContainer = document.getElementById("options-container");
   const questionNumber = document.getElementById("question-number");
   const mainContainer = document.querySelector("main");
+  const timerText = document.getElementById("timer-text");
+  const progressForeground = document.querySelector(".progress-foreground");
+  function goTimer() {
+    clearInterval(timer);
+    timeLeft = 60;
+    timerText.textContent = timeLeft;
+    updateProgress();
+
+    timer = setInterval(() => {
+      timeLeft = timeLeft - 1;
+      timerText.textContent = timeLeft;
+      updateProgress();
+
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        wrongAnswers++;
+        currentQuestionIndex++;
+        loadQuestion();
+      }
+    }, 1000);
+  }
+
+  function updateProgress() {
+    let progress = (timeLeft / 60) * 360;
+    progressForeground.style.background = `conic-gradient(#00ffff ${progress}deg, transparent 0deg)`;
+  }
 
   // Funzione per caricare una nuova domanda
   function loadQuestion() {
@@ -136,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       questionNumber.textContent = `Question ${currentQuestionIndex + 1}/${
         questions.length
       }`;
+      goTimer();
     } else {
       // Se le domande sono finite, mostra il pulsante dei risultati
       showResultsButton();
