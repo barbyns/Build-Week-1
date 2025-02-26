@@ -17,7 +17,25 @@ body {
   width: 20%;
   height: auto;
 }
+main h1 {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+main p {
+  font-family: "Outfit", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: auto;
 
+}
+#Review {
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
 
 h1 {
   color: white;
