@@ -18,12 +18,6 @@ body {
   height: auto;
 }
 
-#Review {
-  /*accentro tutto*/
-  width: 55%;
-  text-align: center;
-  margin: 0 auto;
-}
 
 h1 {
   color: white;
@@ -32,16 +26,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#Review h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  text-shadow: none;
-  font-weight: bold;
-}
 
-#Review p {
-  font-size: 1.8em;
-}
 
 h2 {
   color: hotpink;
@@ -145,4 +130,22 @@ label input[type="checkbox"] {
   font-weight: bold;
   font-size: 1.6em;
   margin: 20% 0 0 0;
+}
+
+#Review {
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#Review h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+#Review p {
+  font-size: 1.8em;
 }

@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results</title>
-    <link src="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="/assets/Chart.js-master"></script>
   </head>
   <body>
     <header>
@@ -17,7 +18,7 @@
         />
       </div>
     </header>
-    <main>
+    <main class="results">
       <div class="center">
         <h1>Results</h1>
         <p>The summary of your answers:</p>
@@ -26,9 +27,7 @@
         <h3>Correct</h3>
         <h3 id="correctPercentage"></h3>
         <p id="Correct"></p>
-      </div>
-
-      <div>
+        <canvas id="myChart" width="400" height="400"></canvas>
         <h3>Wrong</h3>
         <h3 id="wrongPercentage"></h3>
         <p id="Wrong"></p>
