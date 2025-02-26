@@ -25,6 +25,7 @@ let timeLeft = 60;
         let progress = (timeLeft / 60) * 360;
         progressForeground.style.background = `conic-gradient(#00ffff ${progress}deg, transparent 0deg)`;
       };
+      goTimer();
 
   
       /* DA QUI IN POI DA SCRIVERE quando è pronta la parte JS del banchmark
