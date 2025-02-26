@@ -1,26 +1,45 @@
-let currentQuest = 0; // Indice della domanda corrente
-  let score = 0; // Punteggio totale dell'utente
-  let timer; // Variabile per il timer
-  let timeLeft = 60; // Tempo rimanente per ogni domanda
+let timeLeft = 60;
+      let timer;
+      const timerText = document.getElementById("timer");
+      const progressForeground = document.querySelector(".progress-foreground");
 
-  // Funzione per avviare il timer. 
-  const goTimer = function() {
-    clearInterval(timer); // Ferma il timer precedente
-      timeLeft = 60; // Reimposta il timer a 60 sec 
-      document.getElementById("timer-text").textContent = timeLeft;
+      const goTimer = function () {
+        clearInterval(timer); // Ferma il timer precedente. setInterval viene usato per far funzionare il timer che conta i secondi rimanenti per rispondere a ogni domanda 
+        timeLeft = 60; // Reimposta il timer a 60 sec
+        timerText.textContent = timeLeft;
+        updateProgress();
 
-      timer = setInterval(() => { // setInterval viene usato per far funzionare il timer che conta i secondi rimanenti per rispondere a ogni domanda 
+        timer = setInterval(() => {
           timeLeft = timeLeft - 1;
-          document.getElementById("timer-text").textContent = timeLeft;
+          timerText.textContent = timeLeft;
+          updateProgress();
+
           if (timeLeft === 0) {
-            clearInterval(timer)
-              nextQuest(); // Passa automaticamente alla domanda successiva se il tempo scade
+            clearInterval(timer);
+            nextQuest();
           }
-      }, 1000);
-  }
-    
-// Funzione per caricare una nuova domanda. DA COMPLETARE perché bisogna prendere la domanda dall'array.
-const loadQuestion = function() {
+        }, 1000);
+      };
+
+      const updateProgress = function () {
+        let progress = (timeLeft / 60) * 360;
+        progressForeground.style.background = `conic-gradient(#00ffff ${progress}deg, transparent 0deg)`;
+      };
+
+      //const nextQuest = function () { // Questa parte di codice va sistemata insieme alla parte js del benchmark
+      //let score = 0;
+      //goTimer();
+      //};
+
+      goTimer();
+
+
+
+
+
+      /* DA QUI IN POI È SCRIVERE quando è pronta la parte JS del banchmark
+// Funzione per caricare una nuova domanda. DA SCRIVERE quando è pronta la parte JS del banchmark
+/* const loadQuestion = function() {
      if (currentQuest >= questions.length) {
         endQuiz(); // Se non ci sono più domande, termina il quiz
         return;
@@ -46,4 +65,4 @@ const nextQuest = (points = 0) => {
       clearInterval(timer); // Ferma il timer
       window.location.href = "results.html" + score; // Reindirizza alla pagina dei risultati con il punteggio
   }
-
+ */
