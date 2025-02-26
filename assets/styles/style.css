@@ -86,14 +86,14 @@ label input[type="checkbox"] {
   box-shadow: #2f8cb8 0px 5px 25px;
 }
 .button-type-question {
-  display: inline-block;
+  display: inline;
   background-color: rgba(99, 99, 99, 0.4);
   color: white;
   font-weight: bold;
   border-radius: 50px;
   width: 49.6%;
   padding: 1.5em 10em;
-  margin: 5px;
+  margin: 2em auto 0 auto;
 }
 .button-type-question-selected {
   background: rgb(2, 0, 36);
