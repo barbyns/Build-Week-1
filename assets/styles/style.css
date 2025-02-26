@@ -23,6 +23,13 @@ main h1 {
   font-weight: weight;
   font-style: normal;
 }
+main p {
+  font-family: "Outfit", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: auto;
+
+}
 #Review {
   /*accentro tutto*/
   width: 55%;
