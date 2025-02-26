@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultExam = function () {
       const exam = document.getElementById("result-exam");
       if (correctAnswers > wrongAnswers) {
+        exam.style.fontSize = "50px";
+
         exam.innerText = "You passed the exam!";
       } else {
+        exam.style.fontSize = "50px";
+
         exam.innerText = "Please, try again ";
       }
     };
