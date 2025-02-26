@@ -8,17 +8,38 @@
     <title>Benchmark</title>
   </head>
   <body>
-    <div class="logo"><img src="assets//img/epicode_logo.png"/></div>
-    <main><p>How can I create a checkbox in HTML?</p></main>
-    <button class="button-type-question"><code>input type = "check"</code></button>
-    <button class="button-type-question"><code>input type = "checkbox"</code></button>
-    <button class="button-type-question"><code>checkbox</code></button>
-    <button class="button-type-question"><code>input type = "button</code></button>
-    <footer><h6>Question 1/10</h6>
-      <div class="button-type2">
-        <p>Prossima &#8594; </p>
+    <header>
+      <div>
+        <img
+          class="logo"
+          class="logo-container"
+          src="assets/img/epicode_logo.png"
+          alt="logo"
+        />
       </div>
+      <div class="circle-timer">
+        <div class="progress-background"></div>
+        <div class="progress-foreground"></div>
+        <span class="text_top">SECONDS</span>
+        <span id="timer-text">60</span>
+        <span class="text_bottom">REMAINING</span>
+      </div>
+    </header>
+
+    <!-- Contenitore principale per la domanda e le risposte -->
+    <main>
+      <p id="question-text">How can I create a checkbox in HTML?</p>
+      <div id="options-container">
+        <!-- Le opzioni verranno caricate dinamicamente qui -->
+      </div>
+    </main>
+
+    <!-- Footer con numero della domanda corrente -->
+    <footer>
+      <h6 id="question-number">Question 1<span>/10</span></h6>
     </footer>
+
     <script src="assets/javascripts/benchmark.js"></script>
+    <script src="assets/javascripts/timer.js"></script>
   </body>
 </html>

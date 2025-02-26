@@ -9,22 +9,33 @@
   </head>
   <body>
     <header>
-      <img src="./assets/img/epicode_logo.png" alt="Logo di Epicode" />
+      <img
+        class="logo"
+        class="logo-container"
+        src="./assets/img/epicode_logo.png"
+        alt="Logo di Epicode"
+      />
     </header>
     <main>
       <h1>Results</h1>
-      <p>The summary of your anwsers:</p>
+      <p>The summary of your answers:</p>
       <div>
         <h3>Correct</h3>
+        <h3 id="correctPercentage"></h3>
+        <p id="Correct"></p>
       </div>
+      <div id="results-text"></div>
 
       <div>
         <h3>Wrong</h3>
+        <h3 id="wrongPercentage"></h3>
+        <p id="Wrong"></p>
       </div>
 
       <div>
-        <p>Congratulations!</p>
-        <p>You passed the exam.</p>
+        <p id="result-exam"></p>
+      </div>
+      <div>
         <p>
           We'll send you the certificate in the few minutes. Check your email
           (including promotions / spam folder)
@@ -36,5 +47,6 @@
       </aside>
     </main>
     <footer></footer>
+    <script src="./assets/javascripts/results.js"></script>
   </body>
 </html>
