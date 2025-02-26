@@ -7,10 +7,10 @@ let currentQuest = 0; // Indice della domanda corrente
   const goTimer = function() {
     clearInterval(timer); // Ferma il timer precedente
       timeLeft = 60; // Reimposta il timer a 60 sec 
-      document.getElementById("timer").textContent = `Tempo rimasto: ${timeLeft}s`;
+      document.getElementById("timer-text").textContent = `Tempo rimasto: ${timeLeft}s`;
       timer = setInterval(() => { // setInterval viene usato per far funzionare il timer che conta i secondi rimanenti per rispondere a ogni domanda 
           timeLeft = timeLeft - 1;
-          document.getElementById("timer").textContent = `Tempo rimasto: ${timeLeft}s`;
+          document.getElementById("timer-text").textContent = `Tempo rimasto: ${timeLeft}s`;
           if (timeLeft === 0) {
               nextQuest(); // Passa automaticamente alla domanda successiva se il tempo scade
           }
