@@ -111,8 +111,6 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-
 h2 {
   color: hotpink;
   font-size: 2rem;
@@ -190,12 +188,18 @@ label input[type="checkbox"] {
   font-size: 1.5rem;
 }
 .button-type-question-selected {
-  background: rgb(2, 0, 36);
   background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(169, 1, 133, 1) 12%
   );
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 60vh;
+  padding: 1.7vh;
+  margin: 1vh 2vw;
+  font-size: 1.5rem;
 }
 .force-center {
   display: block;
@@ -223,18 +227,18 @@ label input[type="checkbox"] {
   text-align: left;
 }
 
-#correct{
+#correct {
   display: inline;
 }
 
-#wrong{
+#wrong {
   display: inline;
 }
-.canvasContainer{
+.canvasContainer {
   display: inline-block;
   text-align: center;
-width: 400px;
-height: 400px;
+  width: 400px;
+  height: 400px;
 }
 
 #Review input {
@@ -319,27 +323,27 @@ height: 400px;
   font-size: 10px;
 }
 
-#flex{
+#flex {
   display: flex;
   justify-content: center;
 }
 
-#flex div{
+#flex div {
   display: flex;
   flex-direction: column;
 }
 
-#flex p{
-  padding:0;
+#flex p {
+  padding: 0;
 }
 
-.small{
+.small {
   font-size: 1.5em;
 }
-#flex .center{
+#flex .center {
   text-align: center;
 }
-#flex div{
+#flex div {
   margin: auto 2% auto 2%;
 }
 
