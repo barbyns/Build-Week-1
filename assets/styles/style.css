@@ -25,6 +25,7 @@ body {
   font-size: 16px;
   margin-top: 29px;
 }
+
 /* main */
 main h1 {
   font-family: "Outfit", serif;
@@ -118,17 +119,6 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#Review h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  text-shadow: none;
-  font-weight: bold;
-}
-
-#Review p {
-  font-size: 1.8em;
-}
-
 h2 {
   color: hotpink;
   font-size: 2rem;
@@ -189,8 +179,8 @@ label input[type="checkbox"] {
   box-shadow: #2f8cb8 0px 5px 25px;
   background-color: #00ffff;
   position: absolute;
-  top: 44%;
-  left: 49.3%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -200,6 +190,10 @@ label input[type="checkbox"] {
   color: white;
   font-weight: bold;
   border-radius: 50px;
+  width: 60vh;
+  padding: 1.7vh;
+  margin: 1vh 2vw;
+  font-size: 1.5rem;
   height: 25%;
   width: 49.6%;
   padding: 1.5em 10em;
@@ -208,12 +202,18 @@ label input[type="checkbox"] {
 }
 
 .button-type-question-selected {
-  background: rgb(2, 0, 36);
   background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(169, 1, 133, 1) 12%
   );
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 60vh;
+  padding: 1.7vh;
+  margin: 1vh 2vw;
+  font-size: 1.5rem;
 }
 .force-center {
   display: block;
@@ -241,6 +241,20 @@ label input[type="checkbox"] {
   text-align: left;
 }
 
+#correct {
+  display: inline;
+}
+
+#wrong {
+  display: inline;
+}
+.canvasContainer {
+  display: inline-block;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+}
+
 #Review input {
   font-size: 1em;
   margin-bottom: 0;
@@ -251,6 +265,7 @@ label input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 50px;
 }
+
 #question-number {
   text-align: center;
   color: #ece8f1;
@@ -258,7 +273,6 @@ label input[type="checkbox"] {
   font-size: 1.6em;
   margin: 20% 0 0 0;
 }
-
 
 .circle-timer {
   position: absolute;
@@ -322,16 +336,53 @@ label input[type="checkbox"] {
   bottom: 40px;
   font-size: 10px;
 }
-/* section domande */
 
-section div {
-  color: white;
+#flex {
+  display: flex;
+  justify-content: center;
+}
+
+#flex div {
+  display: flex;
+  flex-direction: column;
+}
+
+#flex p {
+  padding: 0;
+}
+
+#correct, #wrong{
+  display:none
+}
+.small{
+  font-size: 1.5em;
+}
+#flex .center {
   text-align: center;
-  font-family: "Outfit", serif;
-  font-size: 4rem;
+}
+#flex div {
+  margin: auto 2% auto 2%;
+}
+
+#Review {
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#Review h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: none;
   font-weight: bold;
 }
- #question-text {
+
+#Review p {
+  font-size: 1.8em;
+}
+/* section domande */
+section #question-text {
   font-family: "Outfit", serif;
   color: white;
   padding-top: 150px;
@@ -339,8 +390,19 @@ section div {
   text-align: center;
   font-size: 4rem;
 }
- #question-number {
+section p {
+  font-size: 25px;
   font-family: "Outfit", serif;
-  color:white;
+  color: white;
   margin: 0;
+}
+#options-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+#question-number {
+  display: flex;
+  justify-content: center;
 }

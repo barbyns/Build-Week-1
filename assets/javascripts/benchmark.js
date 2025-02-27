@@ -1,7 +1,7 @@
-let correctAnswers = 0;
-let wrongAnswers = 0;
-let timeLeft = 60;
-let timer;
+let correctAnswers = 0
+let wrongAnswers = 0
+let timeLeft = 60
+let timer
 document.addEventListener("DOMContentLoaded", function () {
   const questions = [
     {
@@ -95,128 +95,135 @@ document.addEventListener("DOMContentLoaded", function () {
         { text: "Character", correct: true },
       ],
     },
-  ];
+  ]
 
   // Variabile che tiene traccia della domanda corrente
-  let currentQuestionIndex = 0;
+  let currentQuestionIndex = 0
 
   // Seleziona gli elementi HTML in cui verranno mostrate le domande e le opzioni
-  const questionText = document.getElementById("question-text");
-  const optionsContainer = document.getElementById("options-container");
-  const questionNumber = document.getElementById("question-number");
-  const mainContainer = document.querySelector("main");
-  const timerText = document.getElementById("timer");
-  const progressForeground = document.querySelector(".progress-foreground");
+  const questionText = document.getElementById("question-text")
+  const optionsContainer = document.getElementById("options-container")
+  const questionNumber = document.getElementById("question-number")
+  const mainContainer = document.querySelector("main")
+  const timerText = document.getElementById("timer")
+  const progressForeground = document.querySelector(".progress-foreground")
 
   function goTimer() {
-    clearInterval(timer);
-    timeLeft = 60;
-    timerText.textContent = timeLeft;
-    updateProgress();
+    clearInterval(timer)
+    timeLeft = 60
+    timerText.textContent = timeLeft
+    updateProgress()
 
     timer = setInterval(() => {
-      timeLeft--;
+      timeLeft--
 
       if (timeLeft <= 0) {
-        clearInterval(timer);
-        wrongAnswers++;
-        currentQuestionIndex++;
+        clearInterval(timer)
+        wrongAnswers++
+        currentQuestionIndex++
 
         if (currentQuestionIndex < questions.length) {
-          loadQuestion();
+          loadQuestion()
         } else {
-          showResultsButton();
+          showResultsButton()
         }
       }
 
-      timerText.textContent = timeLeft;
-      updateProgress();
-    }, 1000);
+      timerText.textContent = timeLeft
+      updateProgress()
+    }, 1000)
   }
 
   function updateProgress() {
-    let progress = (timeLeft / 60) * 360;
+    let progress = (timeLeft / 60) * 360
     progressForeground.style.background = `conic-gradient(transparent ${
       360 - progress
-    }deg, #00ffff ${360 - progress}deg)`;
+    }deg, #00ffff ${360 - progress}deg)`
   }
 
   // Funzione per caricare una nuova domanda
   function loadQuestion() {
     if (currentQuestionIndex < questions.length) {
-      const currentQuestion = questions[currentQuestionIndex];
+      const currentQuestion = questions[currentQuestionIndex]
 
-      questionText.textContent = currentQuestion.question;
-      optionsContainer.innerHTML = "";
+      questionText.textContent = currentQuestion.question
+      optionsContainer.innerHTML = ""
 
       for (let i = 0; i < currentQuestion.answers.length; i++) {
-        const button = document.createElement("button");
-        button.classList.add("button-type-question");
-        button.textContent = currentQuestion.answers[i].text;
+        const button = document.createElement("button")
+        button.classList.add("button-type-question")
+        button.textContent = currentQuestion.answers[i].text
+
+        button.addEventListener("mouseover", function () {
+          button.classList.add("button-type-question-selected")
+        })
+
+        button.addEventListener("mouseout", function () {
+          button.classList.remove("button-type-question-selected")
+        })
 
         button.addEventListener("click", function () {
-          checkAnswer(currentQuestion.answers[i]);
-        });
-
-        optionsContainer.appendChild(button);
+          checkAnswer(currentQuestion.answers[i])
+        })
+        optionsContainer.appendChild(button)
       }
 
       questionNumber.textContent = `Question ${currentQuestionIndex + 1}/${
         questions.length
-      }`;
-      goTimer();
+      }`
+      goTimer()
     } else {
-      showResultsButton();
+      showResultsButton()
     }
   }
 
   function checkAnswer(selectedAnswer) {
-    clearInterval(timer);
+    clearInterval(timer)
 
     if (selectedAnswer.correct) {
-      correctAnswers++;
+      correctAnswers++
     } else {
-      wrongAnswers++;
+      wrongAnswers++
     }
 
-    currentQuestionIndex++;
+    currentQuestionIndex++
 
     if (currentQuestionIndex < questions.length) {
-      loadQuestion();
+      loadQuestion()
     } else {
       // Nasconde gli elementi del timer e della progress bar
-      document.querySelector(".progress-foreground").style.display = "none";
-      document.querySelector(".progress-background").style.display = "none";
-      document.querySelector(".text_bottom").style.display = "none";
-      document.querySelector(".text_top").style.display = "none";
-      document.querySelector("#timer").style.display = "none";
+      document.querySelector(".progress-foreground").style.display = "none"
+      document.querySelector(".progress-background").style.display = "none"
+      document.querySelector(".text_bottom").style.display = "none"
+      document.querySelector(".text_top").style.display = "none"
+      document.querySelector("#timer").style.display = "none"
 
       // Salva i risultati per la pagina dei risultati
-      localStorage.setItem("correctAnswers", correctAnswers);
-      localStorage.setItem("wrongAnswers", wrongAnswers);
-      showResultsButton();
+      localStorage.setItem("correctAnswers", correctAnswers)
+      localStorage.setItem("wrongAnswers", wrongAnswers)
+      showResultsButton()
     }
   }
 
   // Funzione per mostrare il bottone che porta alla pagina dei risultati
   function showResultsButton() {
-    clearInterval(timer);
-    questionText.innerHTML = "";
-    optionsContainer.innerHTML = "";
+    clearInterval(timer)
+    questionText.innerHTML = ""
+    optionsContainer.innerHTML = ""
 
-    const resultsButton = document.createElement("button");
-    resultsButton.textContent = "Vai ai risultati";
-    resultsButton.classList.add("button-type3");
+    const resultsButton = document.createElement("button")
+    resultsButton.textContent = "Vai ai risultati"
+    resultsButton.classList.add("button-type3")
 
     // Aggiunge un evento per reindirizzare alla pagina dei risultati
     resultsButton.addEventListener("click", function () {
-      window.location.href = "results.html";
-    });
+      window.location.href = "results.html"
+    })
 
     // Aggiunge il bottone alla pagina
-    optionsContainer.appendChild(resultsButton);
+    optionsContainer.appendChild(resultsButton)
   }
 
   // Avvia la prima domanda quando la pagina è caricata
-  loadQuestion();
-});
+  loadQuestion()
+})
