@@ -11,3 +11,10 @@ function checkCheckbox() {
     button.classList.toggle("button-type1") // Rimuove la classe attivata
   }
 }
+//fa che prima che la pagina carichi i checkboxes vanno tolti
+window.onbeforeunload = function () {
+  const checkboxes = document.getElementById("agreement")
+  if (checkboxes.type === "checkbox") {
+    checkboxes.checked = false
+  }
+}
