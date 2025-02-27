@@ -337,7 +337,10 @@ label input[type="checkbox"] {
   padding: 0;
 }
 
-.small {
+#correct, #wrong{
+  display:none
+}
+.small{
   font-size: 1.5em;
 }
 #flex .center {

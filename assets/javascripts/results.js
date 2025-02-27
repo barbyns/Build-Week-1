@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "No quiz results found. Please take the quiz first.";
   } else {
     // Mostra i risultati all'utente
+    const correct = document.getElementById("correct");
+    const wrong = document.getElementById("wrong");
     const resultText = document.getElementById("results-text");
     const resultWrong = document.getElementById("result-wrong");
     const correctP = document.getElementById("resultTextP");
     const wrongP = document.getElementById("resultWrongP");
-    console.log(correctP);
+
+    correct.style.display = "inline";
+    wrong.style.display = "inline";
     resultText.style.color = "white";
     resultText.style.fontSize = "50px";
     resultText.style.whiteSpace = "pre-line";
