@@ -17,25 +17,93 @@ body {
   width: 20%;
   height: auto;
 }
+/* main */
 main h1 {
   font-family: "Outfit", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  font-size: 4rem;
+  margin: auto;
+  padding-left: 2rem;
 }
 main p {
   font-family: "Outfit", serif;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
   margin: auto;
-
+  text-align: left;
+  padding-left: 2rem;
 }
+article h2 {
+  margin: 2rem;
+  padding-top: 1rem;
+  font-family: "Outfit", serif;
+  color: #da00b5;
+  font-weight: bold;
+  text-align: left;
+}
+article p {
+  font-family: "Outfit", serif;
+  text-align: left;
+  margin: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-top: 2px;
+  padding-left: 2rem;
+}
+li span {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  padding: 2px;
+  margin: 0;
+}
+aside {
+  font-family: "Outfit", serif;
+  color: white;
+  padding-bottom: 35px;
+  padding-top: 150px;
+  padding-left: 3rem;
+}
+ul{
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  font-family: "Outfit", serif;
+  margin: 4px;
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+li {
+  margin: auto;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  font-family: "Outfit", serif;
+  font-size: 20px;
+}
+.right{
+  text-align: right;
+  padding-right: 15%;
+  margin-right: 20%;
+}
+
+
 #Review {
   /*accentro tutto*/
   width: 55%;
   text-align: center;
   margin: 0 auto;
+  padding: 1rem;
 }
+
 
 h1 {
   color: white;
