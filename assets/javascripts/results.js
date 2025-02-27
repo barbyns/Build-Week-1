@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const exam = document.getElementById("result-exam");
       if (correctAnswers > wrongAnswers) {
         exam.style.fontSize = "50px";
-
-        exam.innerText = "You passed the exam!";
+        exam.innerText =
+          "You passed the exam! \nWe'll send you the certificate in the few minutes. Check your email (Including promotions / spam) ";
       } else {
+        exam.style.whiteSpace = "pre-line";
         exam.style.fontSize = "50px";
 
         exam.innerText = "Please, try again ";
