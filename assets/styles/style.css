@@ -311,16 +311,26 @@ label input[type="checkbox"] {
   font-size: 10px;
 }
 /* section domande */
-section #question-text {
+
+section div {
+  color: white;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 4rem;
+  font-weight: bold;
+}
+#question-text {
   font-family: "Outfit", serif;
   color: white;
   padding-top: 150px;
   padding-left: 3rem;
   text-align: center;
+  font-size: 4rem;
 }
-section p {
-  font-size: 25px;
+#question-number {
   font-family: "Outfit", serif;
+  color: white;
+  margin: 0;
 }
 #options-container {
   display: flex;
