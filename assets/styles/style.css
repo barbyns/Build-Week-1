@@ -302,6 +302,31 @@ height: 400px;
   bottom: 40px;
   font-size: 10px;
 }
+
+#flex{
+  display: flex;
+  justify-content: center;
+}
+
+#flex div{
+  display: flex;
+  flex-direction: column;
+}
+
+#flex p{
+  padding:0;
+}
+
+.flexCenter{
+  margin: 0 auto;
+}
+.small{
+  font-size: 0.8em;
+}
+#flex div{
+  margin: auto 0;
+}
+
 #Review {
   /*accentro tutto*/
   width: 55%;

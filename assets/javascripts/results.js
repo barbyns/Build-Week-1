@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resultWrong.style.fontSize = "50px";
     resultWrong.style.whiteSpace = "pre-line";
 
-    resultText.textContent = `Correct ${correctAnswersPercentage}% `;
-    resultWrong.textContent = `Wrong answers: ${wrongAnswersPercentage} % `;
+    resultText.textContent = `${correctAnswersPercentage}% `;
+    resultWrong.textContent = `${wrongAnswersPercentage}% `;
     correctP.textContent = `${correctAnswers}/10 question`;
     wrongP.textContent = `${wrongAnswers}/10 question`;
     const resultExam = function () {
