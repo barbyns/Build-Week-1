@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainContainer = document.querySelector("main");
   const timerText = document.getElementById("timer");
   const progressForeground = document.querySelector(".progress-foreground");
+
   function goTimer() {
     clearInterval(timer);
     timeLeft = 60;
@@ -114,16 +115,22 @@ document.addEventListener("DOMContentLoaded", function () {
     updateProgress();
 
     timer = setInterval(() => {
-      timeLeft = timeLeft - 1;
-      timerText.textContent = timeLeft;
-      updateProgress();
+      timeLeft--;
 
-      if (timeLeft === 0) {
+      if (timeLeft <= 0) {
         clearInterval(timer);
         wrongAnswers++;
         currentQuestionIndex++;
-        loadQuestion();
+
+        if (currentQuestionIndex < questions.length) {
+          loadQuestion();
+        } else {
+          showResultsButton();
+        }
       }
+
+      timerText.textContent = timeLeft;
+      updateProgress();
     }, 1000);
   }
 
@@ -136,73 +143,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Funzione per caricare una nuova domanda
   function loadQuestion() {
-    // Se ci sono ancora domande disponibili...
     if (currentQuestionIndex < questions.length) {
-      // Recupera la domanda attuale
       const currentQuestion = questions[currentQuestionIndex];
 
-      // Mostra il testo della domanda
       questionText.textContent = currentQuestion.question;
-
-      // Pulisce le risposte precedenti
       optionsContainer.innerHTML = "";
 
-      // Usa un ciclo for per creare i bottoni delle risposte
       for (let i = 0; i < currentQuestion.answers.length; i++) {
         const button = document.createElement("button");
         button.classList.add("button-type-question");
         button.textContent = currentQuestion.answers[i].text;
 
-        // Aggiunge un evento click per controllare la risposta
         button.addEventListener("click", function () {
           checkAnswer(currentQuestion.answers[i]);
         });
 
-        // Aggiunge il bottone al contenitore delle risposte
         optionsContainer.appendChild(button);
       }
 
-      // Aggiorna il numero della domanda
       questionNumber.textContent = `Question ${currentQuestionIndex + 1}/${
         questions.length
       }`;
       goTimer();
     } else {
-      // Se le domande sono finite, mostra il pulsante dei risultati
       showResultsButton();
     }
   }
 
   function checkAnswer(selectedAnswer) {
+    clearInterval(timer);
+
     if (selectedAnswer.correct) {
-      correctAnswers++; // Incrementa il punteggio delle risposte corrette
+      correctAnswers++;
     } else {
-      wrongAnswers++; // Incrementa il punteggio delle risposte sbagliate
+      wrongAnswers++;
     }
 
-    currentQuestionIndex++; // Passa alla domanda successiva
+    currentQuestionIndex++;
 
     if (currentQuestionIndex < questions.length) {
-      loadQuestion(); // Carica la prossima domanda
+      loadQuestion();
     } else {
+      // Nasconde gli elementi del timer e della progress bar
       document.querySelector(".progress-foreground").style.display = "none";
       document.querySelector(".progress-background").style.display = "none";
       document.querySelector(".text_bottom").style.display = "none";
       document.querySelector(".text_top").style.display = "none";
       document.querySelector("#timer").style.display = "none";
+
       // Salva i risultati per la pagina dei risultati
       localStorage.setItem("correctAnswers", correctAnswers);
       localStorage.setItem("wrongAnswers", wrongAnswers);
-      showResultsButton(); // Mostra il pulsante per vedere i risultati
+      showResultsButton();
     }
   }
 
   // Funzione per mostrare il bottone che porta alla pagina dei risultati
   function showResultsButton() {
-    // Pulisce il contenitore principale
-    mainContainer.innerHTML = "";
+    clearInterval(timer);
+    optionsContainer.innerHTML = "";
 
-    // Crea un nuovo bottone per visualizzare i risultati
     const resultsButton = document.createElement("button");
     resultsButton.textContent = "Vai ai risultati";
     resultsButton.classList.add("button-type2");
@@ -213,45 +213,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Aggiunge il bottone alla pagina
-    mainContainer.appendChild(resultsButton);
+    optionsContainer.appendChild(resultsButton);
   }
 
   // Avvia la prima domanda quando la pagina è caricata
   loadQuestion();
 });
-
-//rileva le domande e le mette nella const giusta
-//const pointAdder = function () {
-//  const correctAnswers = 0;
-//  const wrongAnswers = 0;
-//  if (questions.answers === true) {
-//    correctAnswers = correctAnswers + 1;
-//    return correctAnswers;
-//  } else if (questions.answers === false) {
-//    wrongAnswers = wrongAnswers + 1;
-//    return wrongAnswers;
-//  }
-//};
-////funzione per mettere dinamicamente il punteggio giusto nella pagina results
-//const correctPoints = function () {
-//  const aim = document.getElementById("Correct");
-//  aim.innerText = `${correctAnswers}/10 questions`;
-//}; //funzione per mettere la percentuale nell'punteggio della pagina
-//const correctPercentage = function () {
-//  const operation = ((correctAnswers - 10) / 10) * 100;
-//  const aim = document.getElementById("CorrectPercentage");
-//  aim.innerText = operation`\u0025`;
-//};
-//
-////funzione per mettere dinamicamente il punteggio sbagliato nella pagina results
-//const wrongPoints = function () {
-//  const aim = document.getElementById("Wrong");
-//  aim.innerText = `${wrongAnswers}/10 questions`;
-//};
-////funzione per mettere dinamicamente la percentuale sbagliata nella pagina results
-//const wrongPercentage = function () {
-//  const operation = ((wrongAnswers - 10) / 10) * 100;
-//  const aim = document.getElementById("WrongPercentage");
-//  aim.innerText = operation`\u0025`;
-//};
-//Non credo serva qui, così salva già i risultati
