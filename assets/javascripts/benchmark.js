@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funzione per mostrare il bottone che porta alla pagina dei risultati
   function showResultsButton() {
     clearInterval(timer);
+    questionText.innerHTML = "";
     optionsContainer.innerHTML = "";
 
     const resultsButton = document.createElement("button");
