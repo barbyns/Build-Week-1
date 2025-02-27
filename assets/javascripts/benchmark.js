@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crea un nuovo bottone per visualizzare i risultati
     const resultsButton = document.createElement("button");
     resultsButton.textContent = "Vai ai risultati";
-    resultsButton.classList.add("button-type2");
+    resultsButton.classList.add("button-type3");
 
     // Aggiunge un evento per reindirizzare alla pagina dei risultati
     resultsButton.addEventListener("click", function () {
