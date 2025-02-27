@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const optionsContainer = document.getElementById("options-container");
   const questionNumber = document.getElementById("question-number");
   const mainContainer = document.querySelector("main");
-  const timerText = document.getElementById("timer-text");
+  const timerText = document.getElementById("timer");
   const progressForeground = document.querySelector(".progress-foreground");
   function goTimer() {
     clearInterval(timer);

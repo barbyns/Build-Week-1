@@ -25,20 +25,11 @@ let timeLeft = 60;
         let progress = (timeLeft / 60) * 360;
         progressForeground.style.background = `conic-gradient(#00ffff ${progress}deg, transparent 0deg)`;
       };
-
-      //const nextQuest = function () { // Questa parte di codice va sistemata insieme alla parte js del benchmark
-      //let score = 0;
-      //goTimer();
-      //};
-
       goTimer();
 
-
-
-
-
-      /* DA QUI IN POI È SCRIVERE quando è pronta la parte JS del banchmark
-// Funzione per caricare una nuova domanda. DA SCRIVERE quando è pronta la parte JS del banchmark
+  
+      /* DA QUI IN POI DA SCRIVERE quando è pronta la parte JS del banchmark
+// Funzione per caricare una nuova domanda. 
 /* const loadQuestion = function() {
      if (currentQuest >= questions.length) {
         endQuiz(); // Se non ci sono più domande, termina il quiz
