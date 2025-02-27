@@ -81,43 +81,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         exam.innerText = "Please, try again ";
       }
+      var ctx = document.getElementById("myDoughnutChart").getContext("2d");
+      var myDoughnutChart = new Chart(ctx, {
+        type: "doughnut", // Tipo di grafico
+        data: {
+          datasets: [
+            {
+              data: [correctAnswersPercentage, wrongAnswersPercentage], // Dati percentuali (devono sommarsi a 100)
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 235, 0.6)",
+              ],
+              borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+        },
+      });
     };
+
     resultExam();
 
     // Pulisce il localStorage dopo aver visualizzato i risultati
     localStorage.clear();
   }
-});
-
-var ctx = document.getElementById("myDoughnutChart").getContext("2d");
-var myDoughnutChart = new Chart(ctx, {
-  type: "doughnut", // Tipo di grafico
-  data: {
-    labels: ["Rosso", "Blu", "Giallo"], // Etichette delle sezioni
-    datasets: [
-      {
-        label: "Esempio di Grafico a Ciambella",
-        data: [30, 50, 20], // Dati percentuali (devono sommarsi a 100)
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.6)",
-          "rgba(54, 162, 235, 0.6)",
-          "rgba(255, 206, 86, 0.6)",
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-        ],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-      },
-    },
-  },
 });
