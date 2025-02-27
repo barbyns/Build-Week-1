@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Recupera i dati dal localStorage
   const correctAnswers = localStorage.getItem("correctAnswers");
   const wrongAnswers = localStorage.getItem("wrongAnswers");
+  const correctAnswersPercentage = localStorage.getItem("correctAnswers") * 10;
+  const wrongAnswersPercentage = localStorage.getItem("wrongAnswers") * 10;
   // Verifica se i dati esistono nel localStorage (nel caso in cui l'utente non abbia completato il quiz)
   if (correctAnswers === null || wrongAnswers === null) {
     document.getElementById("results-text").textContent =
@@ -9,13 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     // Mostra i risultati all'utente
     const resultText = document.getElementById("results-text");
+    const resultWrong = document.getElementById("result-wrong");
+    const correctP = document.getElementById("resultTextP");
+    const wrongP = document.getElementById("resultWrongP");
+    console.log(correctP);
     resultText.style.color = "white";
     resultText.style.fontSize = "50px";
     resultText.style.whiteSpace = "pre-line";
+    resultWrong.style.color = "white";
+    resultWrong.style.fontSize = "50px";
+    resultWrong.style.whiteSpace = "pre-line";
 
-    resultText.textContent = `Correct answers: ${correctAnswers} \n
-     Wrong answers: ${wrongAnswers}`;
-
+    resultText.textContent = `Correct ${correctAnswersPercentage}% `;
+    resultWrong.textContent = `Wrong answers: ${wrongAnswersPercentage} % `;
+    correctP.textContent = `${correctAnswers}/10 question`;
+    wrongP.textContent = `${wrongAnswers}/10 question`;
     const resultExam = function () {
       const exam = document.getElementById("result-exam");
       if (correctAnswers > wrongAnswers) {

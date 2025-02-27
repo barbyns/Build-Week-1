@@ -293,3 +293,20 @@ height: 400px;
   bottom: 40px;
   font-size: 10px;
 }
+#Review {
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#Review h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+#Review p {
+  font-size: 1.8em;
+}
