@@ -204,7 +204,7 @@ label input[type="checkbox"] {
 .button-type-question-selected {
   background: linear-gradient(
     0deg,
-    rgba(2, 0, 36, 1) 0%,
+    rgb(0, 36, 25) 0%,
     rgba(169, 1, 133, 1) 12%
   );
   color: white;
