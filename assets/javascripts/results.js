@@ -8,6 +8,45 @@ document.addEventListener("DOMContentLoaded", function () {
   if (correctAnswers === null || wrongAnswers === null) {
     document.getElementById("results-text").textContent =
       "No quiz results found. Please take the quiz first.";
+    // Aggiungi lo stile all'elemento, da mettere magari in CSS
+    const resultsText = document.getElementById("results-text");
+    resultsText.style.color = "white"; // Cambia il colore del testo
+    resultsText.style.fontSize = "60px"; // Imposta la dimensione del font
+    resultsText.style.textAlign = "center"; // Allinea il testo al centro
+    resultsText.style.marginTop = "20px"; // Aggiungi uno spazio sopra
+    // Crea il bottone per tornare alla pagina precedente
+    const backButton = document.createElement("button");
+    backButton.textContent = "Back to Benchmark";
+    backButton.classList.add("button-type3");
+    backButton.onclick = function () {
+      window.location.href = "benchmark.html"; // Torna alla pagina benchmark.html
+    };
+
+    // Aggiungi il bottone alla pagina (lo inseriamo nel contenitore #flex)
+    document.getElementById("flex").appendChild(backButton);
+
+    // Nascondi tutto tranne il bottone e il messaggio
+    const elementsToHide = [
+      document.getElementById("result-wrong"),
+      document.getElementById("resultTextP"),
+      document.getElementById("resultWrongP"),
+      document.getElementById("chart-container"),
+      document.getElementsByClassName("center")[0],
+      document.getElementById("result-exam"),
+      document.querySelector("aside"), // Nascondi anche il link per la recensione
+    ];
+
+    elementsToHide.forEach((element) => {
+      if (element) {
+        element.style.display = "none"; // Nasconde gli elementi
+      }
+    });
+
+    // Nascondi anche la parte di grafico
+    const chartContainer = document.getElementById("myDoughnutChart");
+    if (chartContainer) {
+      chartContainer.style.display = "none"; // Nasconde il grafico
+    }
   } else {
     // Mostra i risultati all'utente
     const correct = document.getElementById("correct");
