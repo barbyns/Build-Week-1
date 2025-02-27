@@ -84,23 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         exam.innerText = "Please, try again "
       }
-      var ctx = document.getElementById("myDoughnutChart").getContext("2d")
-      var myDoughnutChart = new Chart(ctx, {
+      let ctx = document.getElementById("myDoughnutChart").getContext("2d")
+      let myDoughnutChart = new Chart(ctx, {
         type: "doughnut", // Tipo di grafico
         data: {
           datasets: [
             {
               data: [wrongAnswersPercentage, correctAnswersPercentage], // Dati percentuali (devono sommarsi a 100)
-              backgroundColor: [
-                "rgba(255, 99, 132, 0.6)",
-                "rgba(54, 162, 235, 0.6)",
-              ],
-              borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+              backgroundColor: ["#C2128D", "#00FFFF"],
+              borderColor: ["#C2128D", "#00FFFF"],
               borderWidth: 1,
             },
           ],
         },
         options: {
+          cutout: "75%",
           responsive: true,
           plugins: {
             legend: {

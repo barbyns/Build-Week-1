@@ -401,3 +401,6 @@ section p {
 #wrong-container {
   display: none;
 }
+#result-exam {
+  text-align: center;
+}
