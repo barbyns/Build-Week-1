@@ -225,75 +225,65 @@ label input[type="checkbox"] {
   margin: 20% 0 0 0;
 }
 
-.logo-container {
+.circle-timer {
   position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.logo {
+  top: 40px;
+  right: 60px;
   width: 150px;
-  height: auto;
-}
-h1 {
-  color: white;
-  padding-top: 20vh;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-h2 {
-  color: hotpink;
-  font-size: 2rem;
-}
-h3 {
-  color: white;
-  font-size: 1rem;
-  padding-left: 20px;
-}
-li {
-  color: white;
-}
-
-aside {
+  height: 150px;
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 30px;
-}
-
-.checkbox-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-input[type="checkbox"] {
-  margin-right: 10px;
-  background-color: transparent;
-}
-
-label {
-  font-size: 0.8em;
-  font-weight: normal;
+  font-size: 40px;
   color: white;
+  font-family: "Inter";
 }
 
-.button:hover {
-  background-color: #4ca3af;
+.progress-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(rgba(211, 211, 211, 0.5) 360deg, transparent 0deg);
+  mask: radial-gradient(circle, transparent 46%, white 50%);
+  -webkit-mask: radial-gradient(circle, transparent 46%, white 50%);
+}
+/* mask e -webkit-mask (per compatibilità con browser basati su WebKit, come Safari e alcune versioni di Chrome) applicano una maschera radiale al cerchio del timer. Questo effetto crea un buco trasparente al centro del cerchio, rendendo visibile solo la parte esterna (la progress bar). Senza mask il cerchio sarebbe pieno.*/
+.progress-foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#00ffff 360deg, transparent 0deg);
+  mask: radial-gradient(circle, transparent 46%, white 50%);
+  -webkit-mask: radial-gradient(circle, transparent 46%, white 50%);
 }
 
-label {
-  display: flex;
-  align-items: center;
-  color: white;
+.circle-timer::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: none;
+  border-radius: 50%;
 }
 
-label input[type="checkbox"] {
-  margin-right: 8px;
+#timer {
+  position: absolute;
+  z-index: 10;
+  font-weight: bold;
+  font-family: "Inter";
 }
-.checkbox-button-container {
-  color: white;
-  background-color: rgb(0, 255, 213);
-  padding: 5px 10px;
-  border-radius: 4px;
+/* z-index assicura che il testo con i secondi rimanenti rimanga sopra la barra di progresso. Senza z-index, il numero potrebbe finire dietro gli altri elementi e diventare invisibile */
+.text_top {
+  position: absolute;
+  top: 40px;
+  font-size: 10px;
+}
+
+.text_bottom {
+  position: absolute;
+  bottom: 40px;
+  font-size: 10px;
 }
