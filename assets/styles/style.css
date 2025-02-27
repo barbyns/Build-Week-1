@@ -210,8 +210,8 @@ label input[type="checkbox"] {
 .comment {
   cursor: pointer;
   outline: none;
-    border: none;
-    color: white;
+  border: none;
+  color: white;
   width: 100%;
   background-color: transparent;
   box-shadow: none;
@@ -341,14 +341,12 @@ label input[type="checkbox"] {
   padding: 0;
 }
 
-#correct, #wrong{
-  display:none
+#correct,
+#wrong {
+  display: none;
 }
-.small{
+.small {
   font-size: 1.5em;
-}
-#flex .center {
-  text-align: center;
 }
 #flex div {
   margin: auto 2% auto 2%;
@@ -393,6 +391,10 @@ section p {
   margin: 5%;
 }
 #question-number {
+  display: flex;
+  justify-content: center;
+}
+#results-text {
   display: flex;
   justify-content: center;
 }
