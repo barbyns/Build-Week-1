@@ -17,6 +17,7 @@ body {
   width: 20%;
   height: auto;
 }
+
 /* main */
 main h1 {
   font-family: "Outfit", serif;
@@ -332,14 +333,14 @@ height: 400px;
   padding:0;
 }
 
-.flexCenter{
-  margin: 0 auto;
-}
 .small{
-  font-size: 0.8em;
+  font-size: 1.5em;
+}
+#flex .center{
+  text-align: center;
 }
 #flex div{
-  margin: auto 0;
+  margin: auto 2% auto 2%;
 }
 
 #Review {
