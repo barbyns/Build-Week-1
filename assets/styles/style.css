@@ -6,16 +6,20 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  
 }
 
 .logo-container {
   margin-top: 3%;
   margin-left: 3%;
+  
+  height: auto;
 }
 
 .logo {
   width: 20%;
   height: auto;
+  font-size: 16px;
 }
 /* main */
 main h1 {
@@ -96,7 +100,7 @@ li {
 }
 
 #Review {
-  /*accentro tutto*/
+  
   width: 55%;
   text-align: center;
   margin: 0 auto;
@@ -169,10 +173,13 @@ label input[type="checkbox"] {
   color: white;
   font-weight: bold;
   border-radius: 50px;
+  height: 25%;
   width: 49.6%;
   padding: 1.5em 10em;
   margin: 2em auto 0 auto;
+  
 }
+
 .button-type-question-selected {
   background: rgb(2, 0, 36);
   background: linear-gradient(
