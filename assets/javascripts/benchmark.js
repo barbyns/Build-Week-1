@@ -129,7 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateProgress() {
     let progress = (timeLeft / 60) * 360;
-    progressForeground.style.background = `conic-gradient(#00ffff ${progress}deg, transparent 0deg)`;
+    progressForeground.style.background = `conic-gradient(transparent ${
+      360 - progress
+    }deg, #00ffff ${360 - progress}deg)`;
   }
 
   // Funzione per caricare una nuova domanda
