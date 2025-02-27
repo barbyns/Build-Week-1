@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data: {
           datasets: [
             {
-              data: [correctAnswersPercentage, wrongAnswersPercentage], // Dati percentuali (devono sommarsi a 100)
+              data: [wrongAnswersPercentage, correctAnswersPercentage], // Dati percentuali (devono sommarsi a 100)
               backgroundColor: [
                 "rgba(255, 99, 132, 0.6)",
                 "rgba(54, 162, 235, 0.6)",
