@@ -398,3 +398,6 @@ section p {
   display: flex;
   justify-content: center;
 }
+#wrong-container {
+  display: none;
+}
