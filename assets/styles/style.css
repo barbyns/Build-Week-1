@@ -192,9 +192,9 @@ label input[type="checkbox"] {
   color: white;
   font-weight: bold;
   border-radius: 50px;
-  width: 49.6%;
-  padding: 1.5em 10em;
-  margin: 2em auto 0 auto;
+  width: 60vh;
+  padding: 1.7vh;
+  margin: 1vh 2vw;
 }
 .button-type-question-selected {
   background: rgb(2, 0, 36);
@@ -247,7 +247,6 @@ label input[type="checkbox"] {
   font-size: 1.6em;
   margin: 20% 0 0 0;
 }
-
 
 .circle-timer {
   position: absolute;
@@ -312,14 +311,20 @@ label input[type="checkbox"] {
   font-size: 10px;
 }
 /* section domande */
-section #question-text{
+section #question-text {
   font-family: "Outfit", serif;
   color: white;
   padding-top: 150px;
   padding-left: 3rem;
   text-align: center;
 }
-section p{
+section p {
   font-size: 25px;
   font-family: "Outfit", serif;
+}
+#options-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5%;
 }
