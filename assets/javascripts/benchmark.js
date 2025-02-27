@@ -183,6 +183,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentQuestionIndex < questions.length) {
       loadQuestion(); // Carica la prossima domanda
     } else {
+      document.querySelector(".progress-foreground").style.display = "none";
+      document.querySelector(".progress-background").style.display = "none";
+      document.querySelector(".text_bottom").style.display = "none";
+      document.querySelector(".text_top").style.display = "none";
+      document.querySelector("#timer").style.display = "none";
       // Salva i risultati per la pagina dei risultati
       localStorage.setItem("correctAnswers", correctAnswers);
       localStorage.setItem("wrongAnswers", wrongAnswers);
