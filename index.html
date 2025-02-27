@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
-  <header>
-    <div class="logo-container">
-        <img src="assets/img/epicode_logo.png" alt="Epicode Logo" class="logo">
-    </header>  
   <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
   </style>
@@ -26,28 +22,28 @@
     <main><h1>Welcome to </h1><p><b>your exam</b></p></main>
     <article>
       <h2>Instructions</h2>
-      
-        <div>
-          <h3> We don't expect most engineers to know the answers to all of these
-
-        <div>
-              question,so don't worry if you're unsure of a few of them.
-         
-    </div>
-  </h3>
-   <ul>
- <li> Each question is <span class="bold">timed</span> and can only be<span class="bold">answered once.</span>
-</li>
- <li> Changing browser tab or opening other windows will <span class="bold"> invalidate the question.</span>
-</li>
- <li> This exam will take approx. <span class="bold">0-5 minutes.</span>
-</li>
-   </ul>
-    
+      <p>
+        We don't expect most engineers to know the answers to all of these
+        questions,<br>so don't worry if youre unsure of a few of them</br>
+      </p>
+      <ul>
+        <li>
+          Each question is <span class="bold">timed</span> and can only be
+          <span class="bold">answered once.</span>
+        </li>
+        <li>
+          Changing browser tab or opening other windows will
+          <span class="bold">invalidate the question.</span>
+        </li>
+        <li>
+          This exam will take approx. <span class="bold">0-5 minutes.</span>
+        </li>
+      </ul>
+    </article>
     <aside>
       <input type="checkbox" id="agreement" onchange="checkCheckbox(event)" />
-      <label for = "agreement">I promise to answer myself without help from anyone</label>
-      <a id="proceedButton" class="button-type1" href="#">PROCEED</a>
+      I promise to answer myself without help from anyone
+      <div class="right"><a id="proceedButton" class="button-type1" href="#">PROCEED</a></div>
     </aside>
     <script src="./assets/javascripts/index.js"></script>
   </body>
