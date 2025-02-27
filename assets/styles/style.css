@@ -17,6 +17,7 @@ body {
   width: 20%;
   height: auto;
 }
+
 /* main */
 main h1 {
   font-family: "Outfit", serif;
@@ -110,16 +111,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#Review h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  text-shadow: none;
-  font-weight: bold;
-}
 
-#Review p {
-  font-size: 1.8em;
-}
 
 h2 {
   color: hotpink;
@@ -231,6 +223,20 @@ label input[type="checkbox"] {
   text-align: left;
 }
 
+#correct{
+  display: inline;
+}
+
+#wrong{
+  display: inline;
+}
+.canvasContainer{
+  display: inline-block;
+  text-align: center;
+width: 400px;
+height: 400px;
+}
+
 #Review input {
   font-size: 1em;
   margin-bottom: 0;
@@ -241,6 +247,7 @@ label input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 50px;
 }
+
 #question-number {
   text-align: center;
   color: #ece8f1;
@@ -310,6 +317,48 @@ label input[type="checkbox"] {
   position: absolute;
   bottom: 40px;
   font-size: 10px;
+}
+
+#flex{
+  display: flex;
+  justify-content: center;
+}
+
+#flex div{
+  display: flex;
+  flex-direction: column;
+}
+
+#flex p{
+  padding:0;
+}
+
+.small{
+  font-size: 1.5em;
+}
+#flex .center{
+  text-align: center;
+}
+#flex div{
+  margin: auto 2% auto 2%;
+}
+
+#Review {
+  /*accentro tutto*/
+  width: 55%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#Review h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+#Review p {
+  font-size: 1.8em;
 }
 /* section domande */
 section #question-text {

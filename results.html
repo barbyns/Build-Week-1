@@ -4,39 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results</title>
-    <link src="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
-      <img
-        class="logo"
-        class="logo-container"
-        src="./assets/img/epicode_logo.png"
-        alt="Logo di Epicode"
-      />
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="./assets/img/epicode_logo.png"
+          alt="Logo di Epicode"
+        />
+      </div>
+      <div class="center">
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
+      </div>
     </header>
-    <main>
-      <h1>Results</h1>
-      <p>The summary of your answers:</p>
-      <div>
-        <h3></h3>
-        <h3 id="correctPercentage"></h3>
-        <p id="Correct"></p>
+    <main class="results">
+      <!-- contenitore flex inizio-->
+      <div id="flex">
+        <div>
+          <p>Correct</p>
+          <div class="center" id="results-text"></div>
+          <p class="small" id="resultTextP"></p>
+        </div>
+        <div class="canvasContainer">
+          <canvas id="myDoughnutChart"></canvas>
+        </div>
+        <div>
+          <p>Wrong</p>
+          <div class="center" id="result-wrong"></div>
+          <p class="small" id="resultWrongP"></p>
+        </div>
       </div>
-      <div id="results-text"></div>
-
-      <div>
-        <h3></h3>
-        <h3 id="wrongPercentage"></h3>
-        <p id="Wrong"></p>
-      </div>
-
+      <!-- contenitore flex fine-->
       <div>
         <p id="result-exam"></p>
       </div>
+
       <div>
-        <p></p>
+        <p>
+          We'll send you the certificate in the few minutes. Check your email
+          (including promotions / spam folder)
+        </p>
       </div>
 
       <aside class="center">
