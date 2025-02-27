@@ -138,9 +138,17 @@ label input[type="checkbox"] {
 .center {
   text-align: center;
 }
-.button-type1 {
+.button-type1-deactivated {
   font-weight: bold;
   color: black;
+  text-decoration: none;
+  background-color: #63636366;
+  box-shadow: inset 0px 0px 61px 0px rgba(0, 0, 0, 1);
+  padding: 1em 3em;
+}
+.button-type1 {
+  font-weight: bold;
+  color: rgba(29, 28, 28, 0.644);
   text-decoration: none;
   background-color: #00ffff;
   box-shadow: #2f8cb8 0px 5px 25px;
@@ -230,6 +238,7 @@ height: 400px;
   font-size: 1.6em;
   margin: 20% 0 0 0;
 }
+
 
 .circle-timer {
   position: absolute;

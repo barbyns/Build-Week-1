@@ -5,9 +5,9 @@ function checkCheckbox() {
   // Se la checkbox è selezionata, abilita il pulsante
   if (checkbox.checked) {
     button.href = "benchmark.html" // Imposta il link
-    button.classList.add("enabled") // Aggiungi una classe per stile
+    button.classList.toggle("button-type1") // Aggiunge la classe attivata
   } else {
     button.href = "#" // Blocca il link
-    button.classList.remove("enabled") // Rimuovi la classe per stile
+    button.classList.toggle("button-type1") // Rimuove la classe attivata
   }
 }
