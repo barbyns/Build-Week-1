@@ -233,6 +233,7 @@ label input[type="checkbox"] {
   margin: 20% 0 0 0;
 }
 
+
 .circle-timer {
   position: absolute;
   top: 40px;
@@ -294,4 +295,16 @@ label input[type="checkbox"] {
   position: absolute;
   bottom: 40px;
   font-size: 10px;
+}
+/* section domande */
+section #question-text{
+  font-family: "Outfit", serif;
+  color: white;
+  padding-top: 150px;
+  padding-left: 3rem;
+  text-align: center;
+}
+section p{
+  font-size: 25px;
+  font-family: "Outfit", serif;
 }
